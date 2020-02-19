@@ -13,13 +13,4 @@ describe("HelloWorld.vue", () => {
     expect(wrapper.isVueInstance()).toBe(true);
     expect(wrapper.vm.$el.textContent).toMatch(msg);
   });
-
-  it("renders message", () => {
-    const localVue = createLocalVue();
-    localVue.use(VueCompositionApi);
-    const msg = "Hello, world";
-    const wrapper = shallowMount(HelloWorld, { localVue });
-    expect(wrapper.isVueInstance()).toBe(true);
-    expect(wrapper.vm.$el.textContent).toMatch(msg);
-  });
 });
